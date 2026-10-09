@@ -1,0 +1,7 @@
+name = "pkr-groups"
+compatibility_date = "2026-10-08"
+
+[assets]
+directory = "./public/"
+binding = "ASSETS"
+not_found_handling = "404-page"
