@@ -1,139 +1,1671 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>PKR Groups | Business, Technology, Mobility, Agriculture & Commerce</title>
+<meta name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-<meta name="description" content="PKR Groups is a diversified business group led by Founder & CEO M. Prasanna Kumar Reddy, spanning enterprises, technology, mobility, agriculture, commerce and social initiatives.">
+<title>
+PKR Groups | Business, Technology, Mobility, Agriculture & Commerce
+</title>
 
-<meta name="keywords" content="PKR Groups, Prasanna Kumar Reddy, PKR Enterprises, VAYUPRABA Technologies, SHRIVAINA, AKSHIRA, AMRIT, KSHITRIVA, KR Nurseries, SARVAMPADA, SHEEGRA, MSR Charitable Trust">
+<meta name="description"
+content="PKR Groups is a diversified business group led by Founder & CEO M. Prasanna Kumar Reddy, spanning enterprises, technology, mobility, agriculture, commerce and social initiatives.">
 
-<meta name="author" content="PKR Groups">
+<meta name="keywords"
+content="PKR Groups, M Prasanna Kumar Reddy, Prasanna Kumar Reddy, PKR Enterprises, VAYUPRABA Technologies, SHRIVAINA, AKSHIRA, AMRIT, KSHITRIVA, KR Nurseries, SARVAMPADA, SHEEGRA, MSR Charitable Trust">
 
-<link rel="canonical" href="https://pkrgroups.com/">
+<meta name="author"
+content="PKR Groups">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="PKR Groups">
-<meta property="og:description" content="Building businesses across technology, mobility, agriculture, commerce and social impact.">
-<meta property="og:url" content="https://pkrgroups.com/">
+<link rel="canonical"
+href="https://pkrgroups.com/">
 
-<meta name="theme-color" content="#070b16">
+<meta property="og:type"
+content="website">
 
-<link rel="stylesheet" href="styles.css">
+<meta property="og:title"
+content="PKR Groups">
 
-<!-- =========================================
-     FULL CEO PHOTO - MOBILE RESPONSIVE FIX
-     ========================================= -->
+<meta property="og:description"
+content="Building businesses. Creating possibilities.">
+
+<meta property="og:url"
+content="https://pkrgroups.com/">
+
+<meta name="theme-color"
+content="#050816">
+
+
+<!-- =====================================================
+     PREMIUM ANIMATED BACKGROUND + RESPONSIVE CSS
+     ===================================================== -->
 
 <style>
 
-#leadership .portrait-placeholder {
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
-  border-radius: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
+*{
+  box-sizing:border-box;
 }
 
-#leadership .portrait-placeholder img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: center center;
+html{
+  scroll-behavior:smooth;
 }
 
-
-/* =========================================
-   TABLET
-   ========================================= */
-
-@media (max-width: 900px) {
-
-  #leadership {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 30px;
-  }
-
-  #leadership .portrait-placeholder {
-    width: min(100%, 450px);
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #leadership .portrait-placeholder img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: contain;
-  }
-
+body{
+  margin:0;
+  color:#f4f7ff;
+  background:#050816;
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+  overflow-x:hidden;
 }
 
 
-/* =========================================
-   PHONE
-   FULL IMAGE - NO CROPPING
-   ========================================= */
+/* =====================================================
+   ANIMATED BACKGROUND
+   ===================================================== */
 
-@media (max-width: 700px) {
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-10;
+  pointer-events:none;
 
-  #leadership {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 28px;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(73,93,255,.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(0,214,255,.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(160,70,255,.12),
+      transparent 30%
+    ),
+    #050816;
+}
+
+
+/* moving grid */
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:-50%;
+  z-index:-9;
+  pointer-events:none;
+
+  background-image:
+    linear-gradient(
+      rgba(100,130,255,.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(100,130,255,.055) 1px,
+      transparent 1px
+    );
+
+  background-size:55px 55px;
+
+  transform:perspective(600px)
+            rotateX(58deg)
+            translateY(120px);
+
+  animation:
+    gridMove 18s linear infinite;
+
+  opacity:.7;
+}
+
+@keyframes gridMove{
+
+  0%{
+    background-position:0 0;
   }
 
-  #leadership .portrait-placeholder {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    min-height: 0;
-    margin: 0 auto;
-    padding: 0;
-    overflow: visible;
-    border-radius: 20px;
-  }
-
-  #leadership .portrait-placeholder img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: none;
-    object-fit: contain;
-    object-position: center center;
+  100%{
+    background-position:0 550px;
   }
 
 }
 
 
-/* =========================================
-   SMALL PHONES
-   ========================================= */
+/* glowing animated orbs */
 
-@media (max-width: 400px) {
+.bg-orb{
+  position:fixed;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:-8;
 
-  #leadership .portrait-placeholder {
-    width: 100%;
-    max-width: 100%;
+  filter:blur(4px);
+
+  animation:
+    orbFloat 12s ease-in-out infinite alternate;
+}
+
+.orb-a{
+
+  width:420px;
+  height:420px;
+
+  left:-180px;
+  top:12%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(80,100,255,.22),
+      transparent 70%
+    );
+
+}
+
+.orb-b{
+
+  width:480px;
+  height:480px;
+
+  right:-220px;
+  top:42%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,220,255,.16),
+      transparent 70%
+    );
+
+  animation-delay:-5s;
+}
+
+.orb-c{
+
+  width:380px;
+  height:380px;
+
+  left:35%;
+  bottom:-180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(180,70,255,.16),
+      transparent 70%
+    );
+
+  animation-delay:-8s;
+}
+
+@keyframes orbFloat{
+
+  0%{
+    transform:
+      translate3d(0,0,0)
+      scale(1);
   }
 
-  #leadership .portrait-placeholder img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: none;
-    object-fit: contain;
+  50%{
+    transform:
+      translate3d(80px,-45px,0)
+      scale(1.12);
+  }
+
+  100%{
+    transform:
+      translate3d(-50px,60px,0)
+      scale(.94);
+  }
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.nav{
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  width:100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:15px 5%;
+
+  background:
+    rgba(4,7,20,.78);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+
+.logo{
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  color:#fff;
+  text-decoration:none;
+
+  letter-spacing:1px;
+}
+
+.logo span{
+
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:12px;
+
+  font-size:16px;
+  font-weight:900;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7b61ff,
+      #00d4ff
+    );
+
+  box-shadow:
+    0 0 25px rgba(90,100,255,.35);
+}
+
+.logo b{
+  font-size:14px;
+}
+
+.nav nav{
+
+  display:flex;
+  gap:25px;
+}
+
+.nav nav a{
+
+  color:#cbd3ea;
+  text-decoration:none;
+  font-size:14px;
+
+  transition:.25s;
+}
+
+.nav nav a:hover{
+  color:#fff;
+}
+
+.menu{
+  display:none;
+}
+
+
+/* =====================================================
+   GENERAL
+   ===================================================== */
+
+.section{
+
+  width:min(1180px,92%);
+  margin:auto;
+
+  padding:
+    100px 0;
+}
+
+.section-tag{
+
+  color:#8f9dff;
+
+  font-size:11px;
+  font-weight:800;
+
+  letter-spacing:2px;
+
+  margin-bottom:20px;
+}
+
+h1,
+h2,
+h3,
+p{
+  margin-top:0;
+}
+
+h1{
+
+  font-size:
+    clamp(44px,7vw,88px);
+
+  line-height:.98;
+
+  letter-spacing:-4px;
+
+  margin-bottom:28px;
+}
+
+h1 em{
+
+  color:#8b9cff;
+  font-style:normal;
+
+  text-shadow:
+    0 0 35px rgba(100,110,255,.25);
+}
+
+h2{
+
+  font-size:
+    clamp(32px,5vw,60px);
+
+  line-height:1.05;
+
+  letter-spacing:-2px;
+
+  margin-bottom:25px;
+}
+
+h2 span{
+  color:#8294ff;
+}
+
+p{
+
+  color:#9da8c1;
+
+  line-height:1.8;
+
+  font-size:15px;
+}
+
+a{
+  color:inherit;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero{
+
+  min-height:
+    calc(100vh - 72px);
+
+  display:grid;
+
+  grid-template-columns:
+    1.2fr .8fr;
+
+  align-items:center;
+
+  gap:70px;
+}
+
+.hero-copy{
+  position:relative;
+}
+
+.eyebrow{
+
+  color:#7d8cff;
+
+  font-size:11px;
+  font-weight:800;
+
+  letter-spacing:2px;
+
+  margin-bottom:22px;
+}
+
+.hero-copy p{
+
+  max-width:680px;
+
+  font-size:18px;
+}
+
+.actions{
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:14px;
+
+  margin-top:32px;
+}
+
+.btn{
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:48px;
+
+  padding:0 23px;
+
+  border-radius:14px;
+
+  text-decoration:none;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  font-weight:700;
+
+  transition:
+    transform .25s,
+    box-shadow .25s,
+    background .25s;
+}
+
+.btn:hover{
+
+  transform:translateY(-3px);
+
+}
+
+.btn.primary{
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #685cff,
+      #008dff
+    );
+
+  box-shadow:
+    0 10px 35px rgba(80,80,255,.25);
+}
+
+.btn.ghost{
+
+  color:#dbe0ff;
+
+  background:
+    rgba(255,255,255,.04);
+}
+
+
+/* =====================================================
+   HERO CARD
+   ===================================================== */
+
+.hero-card{
+
+  position:relative;
+
+  min-height:390px;
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  border-radius:35px;
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.07),
+      rgba(255,255,255,.015)
+    );
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,.35),
+    inset 0 0 50px rgba(100,100,255,.04);
+
+  overflow:hidden;
+}
+
+.card-glow{
+
+  position:absolute;
+
+  width:240px;
+  height:240px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(75,100,255,.35),
+      transparent 70%
+    );
+
+  filter:blur(10px);
+
+  animation:
+    heroGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow{
+
+  from{
+    transform:scale(.8);
+  }
+
+  to{
+    transform:scale(1.25);
+  }
+
+}
+
+.monogram{
+
+  position:relative;
+
+  font-size:100px;
+  font-weight:900;
+
+  letter-spacing:-8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff,
+      #6d7cff,
+      #00d9ff
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+
+  text-shadow:
+    0 0 45px rgba(100,100,255,.25);
+}
+
+.hero-card p{
+
+  position:relative;
+
+  color:#ccd3e8;
+
+  font-size:16px;
+
+  margin-top:15px;
+}
+
+
+/* =====================================================
+   ABOUT
+   ===================================================== */
+
+.narrow{
+  max-width:850px;
+}
+
+.principles{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:15px;
+
+  margin-top:40px;
+}
+
+.principles div{
+
+  padding:22px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.035);
+
+  border:
+    1px solid rgba(255,255,255,.07);
+}
+
+.principles b{
+  display:block;
+  font-size:18px;
+  margin-bottom:6px;
+}
+
+.principles span{
+  color:#8791aa;
+  font-size:13px;
+}
+
+
+/* =====================================================
+   BUSINESS GRID
+   ===================================================== */
+
+.heading-row{
+
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+
+  gap:30px;
+
+  margin-bottom:40px;
+}
+
+.heading-row p{
+  max-width:430px;
+}
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:18px;
+}
+
+.business{
+
+  position:relative;
+
+  padding:28px;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.018)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.12);
+
+  transition:
+    transform .3s,
+    border-color .3s,
+    box-shadow .3s;
+}
+
+.business:hover{
+
+  transform:translateY(-6px);
+
+  border-color:
+    rgba(125,140,255,.35);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.25),
+    0 0 30px rgba(70,80,255,.05);
+}
+
+.business.featured{
+
+  grid-column:
+    span 2;
+
+  display:flex;
+
+  gap:25px;
+}
+
+.business small{
+
+  color:#7583a3;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:2px;
+}
+
+.business h3{
+
+  margin:
+    10px 0 10px;
+
+  font-size:23px;
+}
+
+.business a{
+
+  display:inline-block;
+
+  margin-top:12px;
+
+  color:#91a0ff;
+
+  text-decoration:none;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.icon{
+
+  width:50px;
+  height:50px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  flex:none;
+
+  border-radius:15px;
+
+  margin-bottom:18px;
+
+  color:#fff;
+
+  font-weight:900;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6b5cff,
+      #008dff
+    );
+
+  box-shadow:
+    0 8px 30px rgba(75,90,255,.2);
+}
+
+.business.featured .icon{
+  margin-bottom:0;
+}
+
+.icon.tech{
+  background:
+    linear-gradient(
+      135deg,
+      #00b7ff,
+      #645cff
+    );
+}
+
+.icon.travel{
+  background:
+    linear-gradient(
+      135deg,
+      #9d55ff,
+      #e43cff
+    );
+}
+
+.icon.agri{
+  background:
+    linear-gradient(
+      135deg,
+      #28b96b,
+      #00a8a8
+    );
+}
+
+.icon.nursery{
+  background:
+    linear-gradient(
+      135deg,
+      #3abf6b,
+      #158dff
+    );
+}
+
+.icon.cart{
+  background:
+    linear-gradient(
+      135deg,
+      #ff7b54,
+      #ff3d9a
+    );
+}
+
+.icon.speed{
+  background:
+    linear-gradient(
+      135deg,
+      #ffbd35,
+      #ff5c5c
+    );
+}
+
+.icon.trust{
+  background:
+    linear-gradient(
+      135deg,
+      #4c8dff,
+      #6f50ff
+    );
+}
+
+
+/* =====================================================
+   CHIPS
+   ===================================================== */
+
+.chips{
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:8px;
+
+  margin-top:15px;
+}
+
+.chips span,
+.chip{
+
+  display:inline-flex;
+
+  padding:
+    7px 10px;
+
+  border-radius:999px;
+
+  color:#aeb8d2;
+
+  font-size:10px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid rgba(255,255,255,.07);
+
+  text-decoration:none;
+}
+
+
+/* =====================================================
+   DARK PANEL
+   ===================================================== */
+
+.dark-panel{
+
+  position:relative;
+
+  width:100%;
+
+  max-width:none;
+
+  padding-left:5%;
+  padding-right:5%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(12,18,38,.65),
+      rgba(4,8,20,.4)
+    );
+
+  border-top:
+    1px solid rgba(255,255,255,.06);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
+
+  overflow:hidden;
+}
+
+.dark-panel::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  right:-250px;
+  top:-250px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(100,80,255,.12),
+      transparent 70%
+    );
+
+  animation:
+    orbFloat 12s ease-in-out infinite alternate;
+
+  pointer-events:none;
+}
+
+
+/* =====================================================
+   BRANDS
+   ===================================================== */
+
+.brand-row{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:15px;
+
+  margin-top:35px;
+}
+
+.brand-row div{
+
+  padding:28px 22px;
+
+  border:
+    1px solid rgba(255,255,255,.07);
+
+  border-radius:20px;
+
+  background:
+    rgba(255,255,255,.025);
+
+  transition:.3s;
+}
+
+.brand-row div:hover{
+
+  transform:translateY(-5px);
+
+  border-color:
+    rgba(120,130,255,.3);
+}
+
+.brand-row strong{
+
+  display:block;
+
+  font-size:19px;
+
+  margin-bottom:10px;
+}
+
+.brand-row small{
+
+  color:#8994ae;
+
+  line-height:1.5;
+}
+
+
+/* =====================================================
+   LEADERSHIP
+   ===================================================== */
+
+.leader{
+
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,.85fr)
+    minmax(0,1.15fr);
+
+  gap:65px;
+
+  align-items:center;
+}
+
+
+/* FULL IMAGE */
+
+.portrait-placeholder{
+
+  width:100%;
+  max-width:480px;
+
+  height:auto !important;
+
+  min-height:0 !important;
+
+  margin:0 auto;
+
+  padding:0;
+
+  overflow:visible !important;
+
+  border-radius:25px;
+
+  display:flex;
+
+  align-items:flex-start;
+
+  justify-content:center;
+
+  background:
+    rgba(255,255,255,.02);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.3);
+}
+
+.portrait-placeholder img{
+
+  display:block;
+
+  width:100% !important;
+
+  height:auto !important;
+
+  max-width:100% !important;
+
+  max-height:none !important;
+
+  object-fit:contain !important;
+
+  object-position:center center !important;
+
+  border-radius:24px;
+}
+
+.role{
+
+  color:#8496ff;
+
+  font-weight:700;
+
+  font-size:17px;
+}
+
+.roles{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:9px;
+
+  margin:
+    25px 0;
+}
+
+.roles span{
+
+  padding:
+    9px 12px;
+
+  border-radius:999px;
+
+  color:#aab5d1;
+
+  font-size:11px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  background:
+    rgba(255,255,255,.03);
+}
+
+.text-link{
+
+  color:#95a2ff;
+
+  text-decoration:none;
+
+  font-weight:700;
+
+  font-size:13px;
+}
+
+
+/* =====================================================
+   DIRECTORS
+   ===================================================== */
+
+.directors-grid{
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+}
+
+.director-card h3 a{
+
+  text-decoration:none;
+}
+
+.director-secondary{
+
+  color:#74809a;
+
+  font-size:13px;
+}
+
+
+/* =====================================================
+   CONTACT
+   ===================================================== */
+
+.contact{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.contact-emails{
+
+  margin-top:25px;
+
+  color:#aab4ca;
+
+  font-size:13px;
+
+  line-height:2;
+}
+
+#enquiryForm{
+
+  display:grid;
+
+  gap:12px;
+}
+
+#enquiryForm input,
+#enquiryForm select,
+#enquiryForm textarea{
+
+  width:100%;
+
+  border:
+    1px solid rgba(255,255,255,.1);
+
+  background:
+    rgba(255,255,255,.035);
+
+  color:#fff;
+
+  border-radius:14px;
+
+  padding:
+    15px;
+
+  outline:none;
+
+  font:inherit;
+
+}
+
+#enquiryForm input:focus,
+#enquiryForm select:focus,
+#enquiryForm textarea:focus{
+
+  border-color:
+    rgba(120,140,255,.55);
+
+  box-shadow:
+    0 0 20px rgba(80,100,255,.08);
+}
+
+#enquiryForm option{
+  background:#0b1020;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer{
+
+  width:100%;
+
+  padding:
+    45px 5%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:25px;
+
+  flex-wrap:wrap;
+
+  border-top:
+    1px solid rgba(255,255,255,.07);
+
+  background:
+    rgba(2,5,14,.7);
+}
+
+.footer-brand{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:13px;
+}
+
+.footer-brand > span{
+
+  width:45px;
+  height:45px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:13px;
+
+  font-weight:900;
+
+  background:
+    linear-gradient(
+      135deg,
+      #705cff,
+      #00cfff
+    );
+}
+
+.footer-brand b{
+  display:block;
+}
+
+.footer-brand small{
+
+  display:block;
+
+  margin-top:5px;
+
+  color:#7f8aa3;
+
+  font-size:10px;
+}
+
+.footer-links{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:18px;
+}
+
+.footer-links a{
+
+  color:#8f9bb5;
+
+  text-decoration:none;
+
+  font-size:11px;
+
+  font-weight:700;
+}
+
+footer p{
+
+  width:100%;
+
+  margin:10px 0 0;
+
+  font-size:11px;
+
+  color:#68748e;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media(max-width:900px){
+
+  .nav{
+    padding:
+      12px 4%;
+  }
+
+  .nav nav{
+    display:none;
+  }
+
+  .menu{
+
+    display:block;
+
+    border:0;
+
+    background:none;
+
+    color:#fff;
+
+    font-size:25px;
+
+    cursor:pointer;
+  }
+
+  .hero{
+
+    grid-template-columns:1fr;
+
+    min-height:auto;
+
+    padding-top:80px;
+
+    gap:45px;
+  }
+
+  .hero-card{
+    min-height:300px;
+  }
+
+  .principles{
+    grid-template-columns:1fr;
+  }
+
+  .brand-row{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .directors-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .contact{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+@media(max-width:700px){
+
+  .section{
+    width:92%;
+
+    padding:
+      70px 0;
+  }
+
+  .dark-panel{
+
+    padding-left:4%;
+    padding-right:4%;
+  }
+
+  h1{
+
+    font-size:
+      clamp(42px,13vw,65px);
+
+    letter-spacing:-3px;
+  }
+
+  h2{
+
+    font-size:
+      clamp(30px,9vw,48px);
+  }
+
+  .hero-copy p{
+    font-size:16px;
+  }
+
+  .actions{
+
+    flex-direction:column;
+
+    align-items:stretch;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .hero-card{
+    min-height:260px;
+  }
+
+  .monogram{
+    font-size:75px;
+  }
+
+  .heading-row{
+    display:block;
+  }
+
+  .grid{
+
+    grid-template-columns:1fr;
+  }
+
+  .business.featured{
+
+    grid-column:auto;
+
+    display:block;
+  }
+
+  .business.featured .icon{
+    margin-bottom:18px;
+  }
+
+  .brand-row{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .directors-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  /* ==========================================
+     CEO PHOTO - FULL IMAGE ON PHONE
+     ========================================== */
+
+  .leader{
+
+    display:grid;
+
+    grid-template-columns:
+      1fr;
+
+    gap:28px;
+  }
+
+  .portrait-placeholder{
+
+    width:100%;
+
+    max-width:100%;
+
+    height:auto !important;
+
+    min-height:0 !important;
+
+    margin:0 auto;
+
+    overflow:visible !important;
+
+    border-radius:20px;
+
+  }
+
+  .portrait-placeholder img{
+
+    display:block;
+
+    width:100% !important;
+
+    height:auto !important;
+
+    max-width:100% !important;
+
+    max-height:none !important;
+
+    object-fit:contain !important;
+
+    object-position:center center !important;
+
+    border-radius:19px;
+
+  }
+
+  .roles{
+
+    gap:7px;
+  }
+
+  .roles span{
+
+    font-size:10px;
+
+    padding:8px 10px;
+  }
+
+  .contact{
+    grid-template-columns:1fr;
+  }
+
+  footer{
+
+    display:block;
+
+    text-align:center;
+  }
+
+  .footer-brand{
+
+    justify-content:center;
+
+    margin-bottom:20px;
+  }
+
+  .footer-links{
+
+    justify-content:center;
+
+    margin-bottom:20px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+   ===================================================== */
+
+@media(max-width:400px){
+
+  .section{
+    width:92%;
+  }
+
+  .logo span{
+
+    width:38px;
+    height:38px;
+
+    font-size:14px;
+  }
+
+  .logo b{
+    font-size:12px;
+  }
+
+  .portrait-placeholder{
+
+    width:100%;
+
+    max-width:100%;
+
+    height:auto !important;
+
+    overflow:visible !important;
+  }
+
+  .portrait-placeholder img{
+
+    width:100% !important;
+
+    height:auto !important;
+
+    max-width:100% !important;
+
+    max-height:none !important;
+
+    object-fit:contain !important;
+  }
+
+}
+
+
+/* =====================================================
+   REDUCE MOTION ACCESSIBILITY
+   ===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+
   }
 
 }
@@ -141,59 +1673,119 @@
 </style>
 
 
+<!-- =====================================================
+     STRUCTURED DATA
+     ===================================================== -->
+
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@type":"Organization",
- "name":"PKR Groups",
- "url":"https://pkrgroups.com/",
- "description":"Diversified business group spanning enterprises, technology, mobility, agriculture, commerce and social initiatives.",
- "founder":{
-   "@type":"Person",
-   "name":"M. Prasanna Kumar Reddy",
-   "jobTitle":"Founder & CEO"
- },
- "brand":[
-   {"@type":"Brand","name":"AKSHIRA"},
-   {"@type":"Brand","name":"AMRIT"},
-   {"@type":"Brand","name":"SHRIVAINA"},
-   {"@type":"Brand","name":"KSHITRIVA"},
-   {"@type":"Brand","name":"SARVAMPADA"},
-   {"@type":"Brand","name":"SHEEGRA"}
- ]
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"PKR Groups",
+  "url":"https://pkrgroups.com/",
+  "description":"Diversified business group spanning enterprises, technology, mobility, agriculture, commerce and social initiatives.",
+  "founder":{
+    "@type":"Person",
+    "name":"M. Prasanna Kumar Reddy",
+    "jobTitle":"Founder & CEO"
+  },
+  "brand":[
+    {
+      "@type":"Brand",
+      "name":"AKSHIRA"
+    },
+    {
+      "@type":"Brand",
+      "name":"AMRIT"
+    },
+    {
+      "@type":"Brand",
+      "name":"SHRIVAINA"
+    },
+    {
+      "@type":"Brand",
+      "name":"KSHITRIVA"
+    },
+    {
+      "@type":"Brand",
+      "name":"SARVAMPADA"
+    },
+    {
+      "@type":"Brand",
+      "name":"SHEEGRA"
+    }
+  ]
 }
 </script>
 
 </head>
 
+
 <body>
+
+<!-- ANIMATED BACKGROUND ELEMENTS -->
 
 <div class="bg-orb orb-a"></div>
 <div class="bg-orb orb-b"></div>
+<div class="bg-orb orb-c"></div>
 
 
-<!-- =========================================
+<!-- =====================================================
      NAVIGATION
-     ========================================= -->
+     ===================================================== -->
 
 <header class="nav">
 
 <a class="logo" href="#top">
-  <span>PKR</span>
-  <b>GROUPS</b>
+
+<span>PKR</span>
+
+<b>GROUPS</b>
+
 </a>
 
-<button class="menu" aria-label="Open menu">
+
+<button
+class="menu"
+aria-label="Open menu"
+onclick="
+document.querySelector('.nav nav').style.display =
+document.querySelector('.nav nav').style.display === 'flex'
+? 'none'
+: 'flex';
+">
+
 ☰
+
 </button>
 
+
 <nav>
-<a href="#about">About</a>
-<a href="#businesses">Businesses</a>
-<a href="#brands">Brands</a>
-<a href="#leadership">Leadership</a>
-<a href="#directors">Directors</a>
-<a href="#contact">Contact</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#businesses">
+Businesses
+</a>
+
+<a href="#brands">
+Brands
+</a>
+
+<a href="#leadership">
+Leadership
+</a>
+
+<a href="#directors">
+Directors
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
 </nav>
 
 </header>
@@ -202,41 +1794,61 @@
 <main id="top">
 
 
-<!-- =========================================
+<!-- =====================================================
      HERO
-     ========================================= -->
+     ===================================================== -->
 
 <section class="hero section">
+
 
 <div class="hero-copy">
 
 <div class="eyebrow">
+
 PKR GROUPS · DIVERSIFIED BUSINESS ECOSYSTEM
+
 </div>
 
+
 <h1>
+
 Building businesses.<br>
-<em>Creating possibilities.</em>
+
+<em>
+Creating possibilities.
+</em>
+
 </h1>
 
+
 <p>
+
 PKR Groups brings together enterprises across technology,
 mobility, agriculture, commerce and social impact under one
 growing ecosystem.
+
 </p>
+
 
 <div class="actions">
 
-<a class="btn primary" href="#businesses">
+<a
+class="btn primary"
+href="#businesses">
+
 Explore Businesses
+
 </a>
+
 
 <a
 class="btn ghost"
 href="https://prasannakumarreddy.sarvampada.info/"
 target="_blank"
 rel="noopener">
+
 CEO Profile ↗
+
 </a>
 
 </div>
@@ -253,8 +1865,13 @@ PKR
 </div>
 
 <p>
+
 Quality Is Not Our Promise,<br>
-<strong>It's Our Identity.</strong>
+
+<strong>
+It's Our Identity.
+</strong>
+
 </p>
 
 </div>
@@ -262,67 +1879,116 @@ Quality Is Not Our Promise,<br>
 </section>
 
 
-<!-- =========================================
+<!-- =====================================================
      ABOUT
-     ========================================= -->
+     ===================================================== -->
 
-<section id="about" class="section narrow">
+<section
+id="about"
+class="section narrow">
 
 <div class="section-tag">
 01 · ABOUT
 </div>
 
+
 <h2>
+
 One group. Multiple sectors.
-<span>One vision.</span>
+
+<span>
+One vision.
+</span>
+
 </h2>
 
+
 <p>
+
 PKR Groups is designed as a connected business platform where
 each company and brand can operate independently while benefiting
 from a common leadership, technology and growth ecosystem.
+
 </p>
+
 
 <div class="principles">
 
-<div>
-<b>Quality</b>
-<span>in what we deliver.</span>
-</div>
 
 <div>
-<b>Loyalty</b>
-<span>in what we build.</span>
+
+<b>
+Quality
+</b>
+
+<span>
+in what we deliver.
+</span>
+
 </div>
 
+
 <div>
-<b>Trust</b>
-<span>in what we earn.</span>
+
+<b>
+Loyalty
+</b>
+
+<span>
+in what we build.
+</span>
+
 </div>
+
+
+<div>
+
+<b>
+Trust
+</b>
+
+<span>
+in what we earn.
+</span>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<!-- =========================================
+<!-- =====================================================
      BUSINESS PORTFOLIO
-     ========================================= -->
+     ===================================================== -->
 
-<section id="businesses" class="section">
+<section
+id="businesses"
+class="section">
+
 
 <div class="section-tag">
 02 · BUSINESS PORTFOLIO
 </div>
 
+
 <div class="heading-row">
 
 <h2>
-Our <span>businesses</span>
+
+Our
+<span>
+businesses
+</span>
+
 </h2>
 
+
 <p>
+
 Explore the pillars and ventures forming the PKR Groups ecosystem.
+
 </p>
 
 </div>
@@ -330,8 +1996,6 @@ Explore the pillars and ventures forming the PKR Groups ecosystem.
 
 <div class="grid businesses">
 
-
-<!-- PKR ENTERPRISES -->
 
 <article class="business featured">
 
@@ -341,20 +2005,26 @@ P
 
 <div>
 
-<small>ENTERPRISES</small>
+<small>
+ENTERPRISES
+</small>
 
 <h3>
 PKR Enterprises
 </h3>
 
 <p>
+
 Consumer products, operating businesses and emerging ventures
 within the PKR ecosystem.
+
 </p>
 
 <div class="chips">
 
-<span>AKSHIRA</span>
+<span>
+AKSHIRA
+</span>
 
 <span>
 AMRIT · WATER & BEVERAGE
@@ -366,8 +2036,6 @@ AMRIT · WATER & BEVERAGE
 
 </article>
 
-
-<!-- VAYUPRABA -->
 
 <article class="business">
 
@@ -384,13 +2052,13 @@ VAYUPRABA Technologies
 </h3>
 
 <p>
+
 Software, AI, digital platforms, automation and technology ventures.
+
 </p>
 
 </article>
 
-
-<!-- SHRIVAINA -->
 
 <article class="business">
 
@@ -407,13 +2075,13 @@ SHRIVAINA
 </h3>
 
 <p>
+
 Tours & travels, transportation, mobility and future travel services.
+
 </p>
 
 </article>
 
-
-<!-- KSHITRIVA -->
 
 <article class="business">
 
@@ -430,14 +2098,17 @@ KSHITRIVA
 </h3>
 
 <p>
-<strong>One-Stop Agri Products Hub</strong>
+
+<strong>
+One-Stop Agri Products Hub
+</strong>
+
 for agricultural products, inputs and farming essentials.
+
 </p>
 
 </article>
 
-
-<!-- KR NURSERIES -->
 
 <article class="business">
 
@@ -454,20 +2125,22 @@ KR Nurseries
 </h3>
 
 <p>
+
 Plants, saplings, nursery products and growing-focused services.
+
 </p>
 
 <a
 href="https://krnursery.sarvampada.info/"
 target="_blank"
 rel="noopener">
+
 Visit KR Nurseries ↗
+
 </a>
 
 </article>
 
-
-<!-- SARVAMPADA -->
 
 <article class="business commerce">
 
@@ -484,20 +2157,22 @@ SARVAMPADA
 </h3>
 
 <p>
+
 E-commerce platform for products, offers, orders and digital shopping.
+
 </p>
 
 <a
 href="https://sarvampada.store"
 target="_blank"
 rel="noopener">
+
 Visit sarvampada.store ↗
+
 </a>
 
 </article>
 
-
-<!-- SHEEGRA -->
 
 <article class="business commerce">
 
@@ -514,20 +2189,22 @@ SHEEGRA
 </h3>
 
 <p>
+
 Rapid-delivery commerce experience built around speed and local fulfilment.
+
 </p>
 
 <a
 href="https://sarvampada.store"
 target="_blank"
 rel="noopener">
+
 Explore via SARVAMPADA ↗
+
 </a>
 
 </article>
 
-
-<!-- MSR -->
 
 <article class="business social">
 
@@ -544,71 +2221,113 @@ MSR Charitable Trust & Foundation
 </h3>
 
 <p>
+
 Charitable, community and social-development initiatives.
+
 </p>
 
 </article>
+
 
 </div>
 
 </section>
 
 
-<!-- =========================================
+<!-- =====================================================
      BRANDS
-     ========================================= -->
+     ===================================================== -->
 
-<section id="brands" class="section dark-panel">
+<section
+id="brands"
+class="section dark-panel">
+
 
 <div class="section-tag">
 03 · BRANDS
 </div>
 
+
 <h2>
-Brands with <span>distinct identities.</span>
+
+Brands with
+<span>
+distinct identities.
+</span>
+
 </h2>
+
 
 <div class="brand-row">
 
-<div>
-<strong>AKSHIRA</strong>
-<small>Where Every Thought Begins.</small>
-</div>
 
 <div>
-<strong>AMRIT</strong>
+
+<strong>
+AKSHIRA
+</strong>
+
+<small>
+Where Every Thought Begins.
+</small>
+
+</div>
+
+
+<div>
+
+<strong>
+AMRIT
+</strong>
+
 <small>
 Water & Beverage · PKR Groups Brand
 </small>
+
 </div>
 
+
 <div>
-<strong>KSHITRIVA</strong>
+
+<strong>
+KSHITRIVA
+</strong>
+
 <small>
 One-Stop Agri Products Hub
 </small>
+
 </div>
 
+
 <div>
-<strong>SHRIVAINA</strong>
+
+<strong>
+SHRIVAINA
+</strong>
+
 <small>
 Mobility · Tours · Transport
 </small>
+
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- =========================================
+<!-- =====================================================
      LEADERSHIP
-     ========================================= -->
+     ===================================================== -->
 
-<section id="leadership" class="section leader">
+<section
+id="leadership"
+class="section leader">
 
 
-<!-- FULL CEO PHOTO -->
+<!-- FULL CEO IMAGE -->
 
 <div class="portrait-placeholder">
 
@@ -628,19 +2347,25 @@ decoding="async"
 04 · LEADERSHIP
 </div>
 
+
 <h2>
 M. Prasanna Kumar Reddy
 </h2>
+
 
 <p class="role">
 Founder & CEO, PKR Groups
 </p>
 
+
 <p>
+
 Leading a growing portfolio across enterprise, technology,
 mobility, agriculture, commerce and social initiatives,
 with a focus on building durable brands and scalable businesses.
+
 </p>
+
 
 <div class="roles">
 
@@ -662,12 +2387,15 @@ Chairman · MSR Charitable Trust & Foundation
 
 </div>
 
+
 <a
 class="text-link"
 href="https://prasannakumarreddy.sarvampada.info/"
 target="_blank"
 rel="noopener">
+
 View official CEO profile →
+
 </a>
 
 </div>
@@ -675,25 +2403,39 @@ View official CEO profile →
 </section>
 
 
-<!-- =========================================
+<!-- =====================================================
      DIRECTORS
-     ========================================= -->
+     ===================================================== -->
 
-<section id="directors" class="section directors-section">
+<section
+id="directors"
+class="section">
+
 
 <div class="section-tag">
+
 05 · DIRECTORS & EXECUTIVE LEADERSHIP
+
 </div>
+
 
 <div class="heading-row">
 
 <h2>
-Leadership across <span>the ecosystem.</span>
+
+Leadership across
+<span>
+the ecosystem.
+</span>
+
 </h2>
 
+
 <p>
+
 Executive and director-level leadership for PKR Groups businesses
 and initiatives.
+
 </p>
 
 </div>
@@ -702,9 +2444,7 @@ and initiatives.
 <div class="grid directors-grid">
 
 
-<!-- PKR ENTERPRISES -->
-
-<article class="business director-card">
+<article class="business">
 
 <div class="icon">
 P
@@ -715,24 +2455,34 @@ PKR ENTERPRISES
 </small>
 
 <h3>
+
 <a href="directors/m-prasanna-kumar-reddy.html">
+
 PKR Enterprises
+
 </a>
+
 </h3>
 
 <p>
+
 <strong>
 CEO & Director
 </strong>
+
 <br>
+
 M. Prasanna Kumar Reddy
+
 </p>
+
 
 <p class="director-secondary">
 
 <strong>
 Managing Director
 </strong>
+
 <br>
 
 _____________
@@ -742,9 +2492,7 @@ _____________
 </article>
 
 
-<!-- SHRIVAINA -->
-
-<article class="business director-card">
+<article class="business">
 
 <div class="icon travel">
 S
@@ -755,25 +2503,31 @@ SHRIVAINA
 </small>
 
 <h3>
+
 <a href="brands/shrivaina.html">
+
 SHRIVAINA
+
 </a>
+
 </h3>
 
 <p>
+
 <strong>
 Managing Director
 </strong>
+
 <br>
+
 M. Prasanna Kumar Reddy
+
 </p>
 
 </article>
 
 
-<!-- VAYUPRABA -->
-
-<article class="business director-card">
+<article class="business">
 
 <div class="icon tech">
 V
@@ -784,24 +2538,34 @@ VAYUPRABA TECHNOLOGIES
 </small>
 
 <h3>
+
 <a href="brands/vayupraba-technologies.html">
+
 VAYUPRABA Technologies
+
 </a>
+
 </h3>
 
 <p>
+
 <strong>
 Managing Director
 </strong>
+
 <br>
+
 M. Prasanna Kumar Reddy
+
 </p>
+
 
 <p class="director-secondary">
 
 <strong>
 CEO & Technical Director
 </strong>
+
 <br>
 
 Prashanth Reddy S
@@ -811,9 +2575,7 @@ Prashanth Reddy S
 </article>
 
 
-<!-- KR NURSERIES -->
-
-<article class="business director-card">
+<article class="business">
 
 <div class="icon nursery">
 KR
@@ -836,6 +2598,7 @@ KR Nurseries
 
 </h3>
 
+
 <p>
 
 <strong>
@@ -847,6 +2610,7 @@ Director
 T. N. Naveen Reddy
 
 </p>
+
 
 <p class="director-secondary">
 
@@ -863,9 +2627,7 @@ B. Kumar Reddy
 </article>
 
 
-<!-- MSR -->
-
-<article class="business director-card">
+<article class="business">
 
 <div class="icon trust">
 M
@@ -885,6 +2647,7 @@ MSR Charitable Trust & Foundation
 
 </h3>
 
+
 <p>
 
 <strong>
@@ -899,39 +2662,52 @@ M. Prasanna Kumar Reddy
 
 </article>
 
+
 </div>
 
 </section>
 
 
-<!-- =========================================
+<!-- =====================================================
      SEARCH DIRECTORY
-     ========================================= -->
+     ===================================================== -->
 
-<section id="search-directory" class="section dark-panel">
+<section
+id="search-directory"
+class="section dark-panel">
+
 
 <div class="section-tag">
+
 06 · PKR SEARCH DIRECTORY
+
 </div>
+
 
 <div class="heading-row">
 
 <h2>
-Find <span>PKR Groups information.</span>
+
+Find
+<span>
+PKR Groups information.
+</span>
+
 </h2>
 
+
 <p>
+
 Explore official pages for our businesses, brands, sectors,
 directors and leadership.
+
 </p>
 
 </div>
 
 
-<div class="grid businesses">
+<div class="grid">
 
-
-<!-- PKR GROUPS -->
 
 <article class="business">
 
@@ -958,8 +2734,6 @@ Open PKR Groups profile →
 </article>
 
 
-<!-- CEO -->
-
 <article class="business">
 
 <div class="icon">
@@ -984,8 +2758,6 @@ Open leadership profile →
 
 </article>
 
-
-<!-- PRASHANTH -->
 
 <article class="business">
 
@@ -1012,8 +2784,6 @@ Open leadership profile →
 </article>
 
 
-<!-- NAVEEN -->
-
 <article class="business">
 
 <div class="icon nursery">
@@ -1038,8 +2808,6 @@ Open director profile →
 
 </article>
 
-
-<!-- KUMAR -->
 
 <article class="business">
 
@@ -1066,8 +2834,6 @@ Open director profile →
 </article>
 
 
-<!-- MSR -->
-
 <article class="business">
 
 <div class="icon trust">
@@ -1092,37 +2858,42 @@ Open initiative profile →
 
 </article>
 
+
 </div>
 
 
-<!-- SECTOR LINKS -->
-
 <div
 class="chips"
-style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px"
+style="margin-top:25px"
 >
 
-<a class="chip" href="sectors/technology.html">
+<a class="chip"
+href="sectors/technology.html">
 Technology
 </a>
 
-<a class="chip" href="sectors/agriculture.html">
+<a class="chip"
+href="sectors/agriculture.html">
 Agriculture
 </a>
 
-<a class="chip" href="sectors/mobility.html">
+<a class="chip"
+href="sectors/mobility.html">
 Mobility
 </a>
 
-<a class="chip" href="sectors/commerce.html">
+<a class="chip"
+href="sectors/commerce.html">
 Commerce
 </a>
 
-<a class="chip" href="sectors/water-beverage.html">
+<a class="chip"
+href="sectors/water-beverage.html">
 Water & Beverage
 </a>
 
-<a class="chip" href="sectors/social-impact.html">
+<a class="chip"
+href="sectors/social-impact.html">
 Social Impact
 </a>
 
@@ -1131,11 +2902,14 @@ Social Impact
 </section>
 
 
-<!-- =========================================
+<!-- =====================================================
      CONTACT
-     ========================================= -->
+     ===================================================== -->
 
-<section id="contact" class="section contact">
+<section
+id="contact"
+class="section contact">
+
 
 <div>
 
@@ -1143,18 +2917,30 @@ Social Impact
 07 · CONNECT
 </div>
 
+
 <h2>
-Build the next <span>venture with us.</span>
+
+Build the next
+<span>
+venture with us.
+</span>
+
 </h2>
 
+
 <p>
+
 For business enquiries, partnerships, opportunities and brand
 enquiries, connect with PKR Groups.
+
 </p>
+
 
 <div class="contact-emails">
 
-<b>Email:</b>
+<b>
+Email:
+</b>
 
 pkrenterprises.co@gmail.com ·
 pkrmarts.msr@gmail.com ·
@@ -1173,12 +2959,14 @@ placeholder="Your name"
 required
 >
 
+
 <input
 name="email"
 type="email"
 placeholder="Email address"
 required
 >
+
 
 <select name="type">
 
@@ -1205,8 +2993,8 @@ Brand enquiry
 name="message"
 rows="5"
 placeholder="Tell us how we can help"
-required
-></textarea>
+required>
+</textarea>
 
 
 <button
@@ -1224,17 +3012,19 @@ Send Enquiry
 </main>
 
 
-<!-- =========================================
+<!-- =====================================================
      FOOTER
-     ========================================= -->
+     ===================================================== -->
 
 <footer>
+
 
 <div class="footer-brand">
 
 <span>
 PKR
 </span>
+
 
 <div>
 
@@ -1260,12 +3050,14 @@ rel="noopener">
 SARVAMPADA
 </a>
 
+
 <a
 href="https://krnursery.sarvampada.info/"
 target="_blank"
 rel="noopener">
 KR NURSERIES
 </a>
+
 
 <a
 href="https://prasannakumarreddy.sarvampada.info/"
@@ -1274,9 +3066,11 @@ rel="noopener">
 CEO PROFILE
 </a>
 
+
 <a href="#directors">
 DIRECTORS
 </a>
+
 
 <a href="#contact">
 CONTACT
@@ -1286,14 +3080,172 @@ CONTACT
 
 
 <p>
+
 © <span id="year"></span>
 PKR Groups. All rights reserved.
+
 </p>
 
 </footer>
 
 
-<script src="script.js"></script>
+<!-- =====================================================
+     BASIC JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+/* Current year */
+
+const yearElement =
+document.getElementById("year");
+
+if(yearElement){
+
+  yearElement.textContent =
+    new Date().getFullYear();
+
+}
+
+
+/* Mobile menu */
+
+const menu =
+document.querySelector(".menu");
+
+const nav =
+document.querySelector(".nav nav");
+
+if(menu && nav){
+
+  menu.addEventListener("click",function(){
+
+    if(window.innerWidth <= 900){
+
+      const current =
+        getComputedStyle(nav).display;
+
+      nav.style.display =
+        current === "none"
+        ? "flex"
+        : "none";
+
+      if(nav.style.display === "flex"){
+
+        nav.style.position="absolute";
+        nav.style.top="69px";
+        nav.style.left="0";
+        nav.style.right="0";
+        nav.style.flexDirection="column";
+        nav.style.padding="20px";
+        nav.style.background="rgba(4,7,20,.97)";
+        nav.style.borderBottom="1px solid rgba(255,255,255,.08)";
+        nav.style.gap="18px";
+
+      }
+
+    }
+
+  });
+
+
+  nav.querySelectorAll("a")
+    .forEach(function(link){
+
+      link.addEventListener("click",function(){
+
+        if(window.innerWidth <= 900){
+
+          nav.style.display="none";
+
+        }
+
+      });
+
+    });
+
+}
+
+
+/* =====================================================
+   ENQUIRY FORM
+   ===================================================== */
+
+const enquiryForm =
+document.getElementById("enquiryForm");
+
+if(enquiryForm){
+
+  enquiryForm.addEventListener(
+    "submit",
+    function(event){
+
+      event.preventDefault();
+
+      const formData =
+        new FormData(enquiryForm);
+
+      const name =
+        formData.get("name") || "";
+
+      const email =
+        formData.get("email") || "";
+
+      const type =
+        formData.get("type") || "";
+
+      const message =
+        formData.get("message") || "";
+
+
+      const whatsappMessage =
+`PKR Groups Enquiry
+
+Name: ${name}
+Email: ${email}
+Enquiry Type: ${type}
+Message: ${message}`;
+
+
+      const encoded =
+        encodeURIComponent(
+          whatsappMessage
+        );
+
+
+      const whatsappNumbers = [
+        "9381661029",
+        "8088804976",
+        "8660384137"
+      ];
+
+
+      /*
+       * Opens the first official enquiry
+       * WhatsApp destination.
+       */
+
+      const whatsappURL =
+        "https://wa.me/" +
+        "91" +
+        whatsappNumbers[0] +
+        "?text=" +
+        encoded;
+
+
+      window.open(
+        whatsappURL,
+        "_blank",
+        "noopener"
+      );
+
+    }
+  );
+
+}
+
+</script>
+
 
 </body>
 </html>
