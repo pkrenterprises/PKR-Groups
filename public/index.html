@@ -23,41 +23,85 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<!-- CEO PHOTO MOBILE RESPONSIVE FIX -->
+<!-- =========================================
+     FULL CEO PHOTO - MOBILE RESPONSIVE FIX
+     ========================================= -->
+
 <style>
+
 #leadership .portrait-placeholder {
   width: 100%;
-  max-width: 420px;
-  min-width: 0;
+  max-width: 480px;
   margin: 0 auto;
+  padding: 0;
   overflow: hidden;
   border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
 }
 
 #leadership .portrait-placeholder img {
   display: block;
   width: 100%;
-  max-width: 100%;
   height: auto;
-  max-height: 620px;
+  max-width: 100%;
   object-fit: contain;
-  object-position: center top;
+  object-position: center center;
 }
 
-@media (max-width: 700px) {
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
   #leadership {
     grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+    gap: 30px;
   }
 
   #leadership .portrait-placeholder {
-    width: min(100%, 360px);
-    max-width: 360px;
+    width: min(100%, 450px);
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #leadership .portrait-placeholder img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+}
+
+
+/* =========================================
+   PHONE
+   FULL IMAGE - NO CROPPING
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  #leadership {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  #leadership .portrait-placeholder {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     min-height: 0;
     margin: 0 auto;
+    padding: 0;
+    overflow: visible;
+    border-radius: 20px;
   }
 
   #leadership .portrait-placeholder img {
@@ -67,10 +111,35 @@
     max-width: 100%;
     max-height: none;
     object-fit: contain;
-    object-position: center top;
+    object-position: center center;
   }
+
 }
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  #leadership .portrait-placeholder {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #leadership .portrait-placeholder img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+  }
+
+}
+
 </style>
+
 
 <script type="application/ld+json">
 {
@@ -102,6 +171,11 @@
 <div class="bg-orb orb-a"></div>
 <div class="bg-orb orb-b"></div>
 
+
+<!-- =========================================
+     NAVIGATION
+     ========================================= -->
+
 <header class="nav">
 
 <a class="logo" href="#top">
@@ -109,22 +183,28 @@
   <b>GROUPS</b>
 </a>
 
-<button class="menu" aria-label="Open menu">☰</button>
+<button class="menu" aria-label="Open menu">
+☰
+</button>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#businesses">Businesses</a>
-  <a href="#brands">Brands</a>
-  <a href="#leadership">Leadership</a>
-  <a href="#directors">Directors</a>
-  <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#businesses">Businesses</a>
+<a href="#brands">Brands</a>
+<a href="#leadership">Leadership</a>
+<a href="#directors">Directors</a>
+<a href="#contact">Contact</a>
 </nav>
 
 </header>
 
+
 <main id="top">
 
-<!-- HERO -->
+
+<!-- =========================================
+     HERO
+     ========================================= -->
 
 <section class="hero section">
 
@@ -163,6 +243,7 @@ CEO Profile ↗
 
 </div>
 
+
 <div class="hero-card">
 
 <div class="card-glow"></div>
@@ -181,7 +262,9 @@ Quality Is Not Our Promise,<br>
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================================
+     ABOUT
+     ========================================= -->
 
 <section id="about" class="section narrow">
 
@@ -196,8 +279,8 @@ One group. Multiple sectors.
 
 <p>
 PKR Groups is designed as a connected business platform where
-each company and brand can operate independently while
-benefiting from a common leadership, technology and growth ecosystem.
+each company and brand can operate independently while benefiting
+from a common leadership, technology and growth ecosystem.
 </p>
 
 <div class="principles">
@@ -222,7 +305,9 @@ benefiting from a common leadership, technology and growth ecosystem.
 </section>
 
 
-<!-- BUSINESS PORTFOLIO -->
+<!-- =========================================
+     BUSINESS PORTFOLIO
+     ========================================= -->
 
 <section id="businesses" class="section">
 
@@ -242,6 +327,7 @@ Explore the pillars and ventures forming the PKR Groups ecosystem.
 
 </div>
 
+
 <div class="grid businesses">
 
 
@@ -249,7 +335,9 @@ Explore the pillars and ventures forming the PKR Groups ecosystem.
 
 <article class="business featured">
 
-<div class="icon">P</div>
+<div class="icon">
+P
+</div>
 
 <div>
 
@@ -267,7 +355,10 @@ within the PKR ecosystem.
 <div class="chips">
 
 <span>AKSHIRA</span>
-<span>AMRIT · WATER & BEVERAGE</span>
+
+<span>
+AMRIT · WATER & BEVERAGE
+</span>
 
 </div>
 
@@ -280,9 +371,13 @@ within the PKR ecosystem.
 
 <article class="business">
 
-<div class="icon tech">V</div>
+<div class="icon tech">
+V
+</div>
 
-<small>TECHNOLOGY</small>
+<small>
+TECHNOLOGY
+</small>
 
 <h3>
 VAYUPRABA Technologies
@@ -299,9 +394,13 @@ Software, AI, digital platforms, automation and technology ventures.
 
 <article class="business">
 
-<div class="icon travel">S</div>
+<div class="icon travel">
+S
+</div>
 
-<small>MOBILITY</small>
+<small>
+MOBILITY
+</small>
 
 <h3>
 SHRIVAINA
@@ -318,9 +417,13 @@ Tours & travels, transportation, mobility and future travel services.
 
 <article class="business">
 
-<div class="icon agri">K</div>
+<div class="icon agri">
+K
+</div>
 
-<small>AGRICULTURE</small>
+<small>
+AGRICULTURE
+</small>
 
 <h3>
 KSHITRIVA
@@ -338,9 +441,13 @@ for agricultural products, inputs and farming essentials.
 
 <article class="business">
 
-<div class="icon nursery">KR</div>
+<div class="icon nursery">
+KR
+</div>
 
-<small>AGRICULTURE</small>
+<small>
+AGRICULTURE
+</small>
 
 <h3>
 KR Nurseries
@@ -364,9 +471,13 @@ Visit KR Nurseries ↗
 
 <article class="business commerce">
 
-<div class="icon cart">S</div>
+<div class="icon cart">
+S
+</div>
 
-<small>COMMERCE</small>
+<small>
+COMMERCE
+</small>
 
 <h3>
 SARVAMPADA
@@ -390,9 +501,13 @@ Visit sarvampada.store ↗
 
 <article class="business commerce">
 
-<div class="icon speed">S</div>
+<div class="icon speed">
+S
+</div>
 
-<small>QUICK COMMERCE</small>
+<small>
+QUICK COMMERCE
+</small>
 
 <h3>
 SHEEGRA
@@ -416,9 +531,13 @@ Explore via SARVAMPADA ↗
 
 <article class="business social">
 
-<div class="icon trust">M</div>
+<div class="icon trust">
+M
+</div>
 
-<small>SOCIAL IMPACT</small>
+<small>
+SOCIAL IMPACT
+</small>
 
 <h3>
 MSR Charitable Trust & Foundation
@@ -435,7 +554,9 @@ Charitable, community and social-development initiatives.
 </section>
 
 
-<!-- BRANDS -->
+<!-- =========================================
+     BRANDS
+     ========================================= -->
 
 <section id="brands" class="section dark-panel">
 
@@ -456,17 +577,23 @@ Brands with <span>distinct identities.</span>
 
 <div>
 <strong>AMRIT</strong>
-<small>Water & Beverage · PKR Groups Brand</small>
+<small>
+Water & Beverage · PKR Groups Brand
+</small>
 </div>
 
 <div>
 <strong>KSHITRIVA</strong>
-<small>One-Stop Agri Products Hub</small>
+<small>
+One-Stop Agri Products Hub
+</small>
 </div>
 
 <div>
 <strong>SHRIVAINA</strong>
-<small>Mobility · Tours · Transport</small>
+<small>
+Mobility · Tours · Transport
+</small>
 </div>
 
 </div>
@@ -474,9 +601,14 @@ Brands with <span>distinct identities.</span>
 </section>
 
 
-<!-- LEADERSHIP -->
+<!-- =========================================
+     LEADERSHIP
+     ========================================= -->
 
 <section id="leadership" class="section leader">
+
+
+<!-- FULL CEO PHOTO -->
 
 <div class="portrait-placeholder">
 
@@ -488,6 +620,7 @@ decoding="async"
 >
 
 </div>
+
 
 <div>
 
@@ -542,7 +675,9 @@ View official CEO profile →
 </section>
 
 
-<!-- DIRECTORS -->
+<!-- =========================================
+     DIRECTORS
+     ========================================= -->
 
 <section id="directors" class="section directors-section">
 
@@ -563,6 +698,7 @@ and initiatives.
 
 </div>
 
+
 <div class="grid directors-grid">
 
 
@@ -570,9 +706,13 @@ and initiatives.
 
 <article class="business director-card">
 
-<div class="icon">P</div>
+<div class="icon">
+P
+</div>
 
-<small>PKR ENTERPRISES</small>
+<small>
+PKR ENTERPRISES
+</small>
 
 <h3>
 <a href="directors/m-prasanna-kumar-reddy.html">
@@ -581,13 +721,22 @@ PKR Enterprises
 </h3>
 
 <p>
-<strong>CEO & Director</strong><br>
+<strong>
+CEO & Director
+</strong>
+<br>
 M. Prasanna Kumar Reddy
 </p>
 
 <p class="director-secondary">
-<strong>Managing Director</strong><br>
+
+<strong>
+Managing Director
+</strong>
+<br>
+
 _____________
+
 </p>
 
 </article>
@@ -597,9 +746,13 @@ _____________
 
 <article class="business director-card">
 
-<div class="icon travel">S</div>
+<div class="icon travel">
+S
+</div>
 
-<small>SHRIVAINA</small>
+<small>
+SHRIVAINA
+</small>
 
 <h3>
 <a href="brands/shrivaina.html">
@@ -608,7 +761,10 @@ SHRIVAINA
 </h3>
 
 <p>
-<strong>Managing Director</strong><br>
+<strong>
+Managing Director
+</strong>
+<br>
 M. Prasanna Kumar Reddy
 </p>
 
@@ -619,9 +775,13 @@ M. Prasanna Kumar Reddy
 
 <article class="business director-card">
 
-<div class="icon tech">V</div>
+<div class="icon tech">
+V
+</div>
 
-<small>VAYUPRABA TECHNOLOGIES</small>
+<small>
+VAYUPRABA TECHNOLOGIES
+</small>
 
 <h3>
 <a href="brands/vayupraba-technologies.html">
@@ -630,13 +790,22 @@ VAYUPRABA Technologies
 </h3>
 
 <p>
-<strong>Managing Director</strong><br>
+<strong>
+Managing Director
+</strong>
+<br>
 M. Prasanna Kumar Reddy
 </p>
 
 <p class="director-secondary">
-<strong>CEO & Technical Director</strong><br>
+
+<strong>
+CEO & Technical Director
+</strong>
+<br>
+
 Prashanth Reddy S
+
 </p>
 
 </article>
@@ -646,9 +815,13 @@ Prashanth Reddy S
 
 <article class="business director-card">
 
-<div class="icon nursery">KR</div>
+<div class="icon nursery">
+KR
+</div>
 
-<small>KR NURSERIES</small>
+<small>
+KR NURSERIES
+</small>
 
 <h3>
 
@@ -656,41 +829,72 @@ Prashanth Reddy S
 href="https://krnursery.sarvampada.info/"
 target="_blank"
 rel="noopener">
+
 KR Nurseries
+
 </a>
 
 </h3>
 
 <p>
-<strong>Director</strong><br>
+
+<strong>
+Director
+</strong>
+
+<br>
+
 T. N. Naveen Reddy
+
 </p>
 
 <p class="director-secondary">
-<strong>Director</strong><br>
+
+<strong>
+Director
+</strong>
+
+<br>
+
 B. Kumar Reddy
+
 </p>
 
 </article>
 
 
-<!-- MSR TRUST -->
+<!-- MSR -->
 
 <article class="business director-card">
 
-<div class="icon trust">M</div>
+<div class="icon trust">
+M
+</div>
 
-<small>MSR CHARITABLE TRUST & FOUNDATION</small>
+<small>
+MSR CHARITABLE TRUST & FOUNDATION
+</small>
 
 <h3>
+
 <a href="msr-charitable-trust.html">
+
 MSR Charitable Trust & Foundation
+
 </a>
+
 </h3>
 
 <p>
-<strong>Chairman</strong><br>
+
+<strong>
+Chairman
+</strong>
+
+<br>
+
 M. Prasanna Kumar Reddy
+
 </p>
 
 </article>
@@ -700,7 +904,9 @@ M. Prasanna Kumar Reddy
 </section>
 
 
-<!-- SEARCH DIRECTORY -->
+<!-- =========================================
+     SEARCH DIRECTORY
+     ========================================= -->
 
 <section id="search-directory" class="section dark-panel">
 
@@ -721,6 +927,7 @@ directors and leadership.
 
 </div>
 
+
 <div class="grid businesses">
 
 
@@ -728,9 +935,13 @@ directors and leadership.
 
 <article class="business">
 
-<div class="icon">P</div>
+<div class="icon">
+P
+</div>
 
-<small>GROUP</small>
+<small>
+GROUP
+</small>
 
 <h3>
 PKR Groups
@@ -751,9 +962,13 @@ Open PKR Groups profile →
 
 <article class="business">
 
-<div class="icon">CEO</div>
+<div class="icon">
+CEO
+</div>
 
-<small>LEADERSHIP</small>
+<small>
+LEADERSHIP
+</small>
 
 <h3>
 M. Prasanna Kumar Reddy
@@ -774,9 +989,13 @@ Open leadership profile →
 
 <article class="business">
 
-<div class="icon tech">V</div>
+<div class="icon tech">
+V
+</div>
 
-<small>EXECUTIVE</small>
+<small>
+EXECUTIVE
+</small>
 
 <h3>
 Prashanth Reddy S
@@ -797,9 +1016,13 @@ Open leadership profile →
 
 <article class="business">
 
-<div class="icon nursery">KR</div>
+<div class="icon nursery">
+KR
+</div>
 
-<small>DIRECTOR</small>
+<small>
+DIRECTOR
+</small>
 
 <h3>
 T. N. Naveen Reddy
@@ -820,9 +1043,13 @@ Open director profile →
 
 <article class="business">
 
-<div class="icon nursery">KR</div>
+<div class="icon nursery">
+KR
+</div>
 
-<small>DIRECTOR</small>
+<small>
+DIRECTOR
+</small>
 
 <h3>
 B. Kumar Reddy
@@ -843,9 +1070,13 @@ Open director profile →
 
 <article class="business">
 
-<div class="icon trust">M</div>
+<div class="icon trust">
+M
+</div>
 
-<small>CHAIRMAN</small>
+<small>
+CHAIRMAN
+</small>
 
 <h3>
 MSR Charitable Trust & Foundation
@@ -900,7 +1131,9 @@ Social Impact
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================================
+     CONTACT
+     ========================================= -->
 
 <section id="contact" class="section contact">
 
@@ -922,6 +1155,7 @@ enquiries, connect with PKR Groups.
 <div class="contact-emails">
 
 <b>Email:</b>
+
 pkrenterprises.co@gmail.com ·
 pkrmarts.msr@gmail.com ·
 prasannatravels395@gmail.com
@@ -948,12 +1182,24 @@ required
 
 <select name="type">
 
-<option>Business enquiry</option>
-<option>Partnership</option>
-<option>Career</option>
-<option>Brand enquiry</option>
+<option>
+Business enquiry
+</option>
+
+<option>
+Partnership
+</option>
+
+<option>
+Career
+</option>
+
+<option>
+Brand enquiry
+</option>
 
 </select>
+
 
 <textarea
 name="message"
@@ -962,10 +1208,13 @@ placeholder="Tell us how we can help"
 required
 ></textarea>
 
+
 <button
 class="btn primary"
 type="submit">
+
 Send Enquiry
+
 </button>
 
 </form>
@@ -975,17 +1224,23 @@ Send Enquiry
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================================
+     FOOTER
+     ========================================= -->
 
 <footer>
 
 <div class="footer-brand">
 
-<span>PKR</span>
+<span>
+PKR
+</span>
 
 <div>
 
-<b>PKR GROUPS</b>
+<b>
+PKR GROUPS
+</b>
 
 <small>
 Quality Is Not Our Promise, It's Our Identity.
@@ -1031,7 +1286,8 @@ CONTACT
 
 
 <p>
-© <span id="year"></span> PKR Groups. All rights reserved.
+© <span id="year"></span>
+PKR Groups. All rights reserved.
 </p>
 
 </footer>
